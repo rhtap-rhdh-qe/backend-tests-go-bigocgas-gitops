@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: backend-tests-go-bigocgas
+  janus-idp.io/tekton: backend-tests-go-bigocgas
+  backstage.io/kubernetes-id: backend-tests-go-bigocgas
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: backend-tests-go-bigocgas
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
